@@ -1,0 +1,4 @@
+Olá, mundo!
+Este é um arquivo de texto.
+Aqui está mais uma linha.
+E uma última linha.
