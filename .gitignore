@@ -1,0 +1,19 @@
+# Arquivos Python compilados
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+# Virtual Environment (venv)
+venv/
+.env
+# Configurações locais do VSCode
+.vscode/
+# Arquivos de log
+*.log
+
+# Arquivos de banco de dados locais
+*.sqlite3
+*.db
+
+# Notebooks Jupyter temporários
+.ipynb_checkpoints/
