@@ -1,22 +1,28 @@
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.image import Image, AsyncImage
+import random
+from kivy.uix.button import Button
+from kivy.uix.boxlayout import BoxLayout
+
+red = [1, 0, 0, 1]
+green = [0, 1, 0, 1]
+blue = [0, 0, 1, 1]
+purple = [1, 0, 1, 1]
 
 
-class MainApp(App):
+class HBoxLayoutExample(App):
     def build(self):
-        label = Label(
-            text="Hello from Kivy",
-            size_hint=(0.5, 0.5),
-            pos_hint={"center_x": 0.5, "center_y": 0.5},
-        )
-        img = AsyncImage(
-            source="https://www.python.org/static/img/python-logo.png",
-            size_hint=(1, 0.5),
-            pos_hint={"center_x": 0.5, "center_y": 0.5},
-        )
-        return img
+        layout = BoxLayout(padding=10)
+        colors = [red, green, blue, purple]
+
+        for i in range(5):
+            btn = Button(
+                text="Button #%s" % (i + 1), background_color=random.choice(colors)
+            )
+            layout.add_widget(btn)
+        return layout
 
 
 if __name__ == "__main__":
-    MainApp().run()
+    HBoxLayoutExample().run()
